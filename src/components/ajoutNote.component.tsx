@@ -25,7 +25,7 @@ const AjoutNote = () => {
         })
         if (indexCours != -1) {
             etudiant?.cours[indexCours].notes.push(+note)
-            await axios.put('http://127.0.0.1:3000/etudiants/update', {etudiant}).then((response) => {});
+            await axios.put('http://127.0.0.1:3000/etudiants/update', {etudiant}).then(() => {});
         }
     }
 

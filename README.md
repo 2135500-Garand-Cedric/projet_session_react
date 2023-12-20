@@ -1,30 +1,21 @@
-# React + TypeScript + Vite
+Procédure d'installation de l'application sur un poste local:
+1. Cloner le repo github
+2. Ouvrir dans Visual Studio Code
+3. Ouvrir un terminal à la racine du projet
+4. Lancer la commande "npm install" pour installer les dépendances du projet
+5. Lancer la commande "npm run dev" pour lancer le projet
+6. Aller à l'adresse "http://localhost:5173/ pour voir le projet
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Description de l'application:
+L'application est un système de gestion d'élèves. Les onlgets en haut
+de l'écran permettent de selectionner les élèves selon un catégorie.
+Il est possible d'ajouter un élève en appuyant sur le bouton
+"Ajouter un étudiant" en bas de la page de l'onglet "Tous les étudiants".
+En appuyant sur un étudiant, on peut voir ses informations. C'est possible de
+supprimer un étudiant ou d'ajouter une note à un de ses cours.
+Il faut être authentifié pour pouvoir ajouter une note, ajouter un élève ou supprimer
+un élève.
 
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
-
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+Informations d'authentifiactions:
+Courriel: rivard.etienne@cegepvicto.ca
+Mot de passe: EtienneRivard123

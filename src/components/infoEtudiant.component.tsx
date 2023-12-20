@@ -5,8 +5,11 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { FormattedMessage, FormattedNumber } from "react-intl";
+import { useAuthState } from "react-firebase-hooks/auth";
+import { auth } from "../firebase";
 
 const InfoEtudiant = () => {
+    const [user, _] = useAuthState(auth);
     const [etudiant, setEtudiant] = useState<IEtudiant>()
     const [age, setAge] = useState<number>(0)
     const [nombreHeureCours, setNombreHeuresCours] = useState<number>(0)
@@ -27,7 +30,8 @@ const InfoEtudiant = () => {
     }, []);
 
     const supprimerEtudiant = async () => {
-        await axios.delete('http://127.0.0.1:3000/etudiants/delete/' + id).then((response) => {});
+        if (!user) return
+        await axios.delete('http://127.0.0.1:3000/etudiants/delete/' + id).then(() => {});
     }
     
     return (
@@ -76,11 +80,13 @@ const InfoEtudiant = () => {
                 </div>
                 <div className="element">{nombreHeureCours}h</div>
             </div>
-            <div className="conteneur">
-                <Link onClick={supprimerEtudiant} to={'/'} className="bouton">
-                    <FormattedMessage id="bouton.supprimeretudiant" defaultMessage="Supprimer l'étudiant"/>
-                </Link>
-            </div>
+            {user &&
+                <div className="conteneur">
+                    <Link onClick={supprimerEtudiant} to={'/'} className="bouton">
+                        <FormattedMessage id="bouton.supprimeretudiant" defaultMessage="Supprimer l'étudiant"/>
+                    </Link>
+                </div>
+            }
             {etudiant?.cours.length != 0 &&
                 <h2>
                     <FormattedMessage id="onglet.cours" defaultMessage="Cours"/>

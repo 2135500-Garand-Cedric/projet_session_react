@@ -1,5 +1,5 @@
 import axios from "axios";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { IEtudiant } from "../models/Etudiant";
 import '../styles/pageCours.styles.css'
 import ListeEtudiants from "./listeEtudiants.component";

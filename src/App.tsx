@@ -3,7 +3,6 @@ import {
   Routes,
   Route,
   Outlet,
-  useParams,
 } from 'react-router-dom';
 
 import PagePrincipale from './components/pagePrincipale.component';
@@ -16,7 +15,7 @@ import InfoEtudiant from './components/infoEtudiant.component';
 import { FormattedMessage, IntlProvider } from 'react-intl';
 import Francais from './lang/fr.json';
 import English from './lang/en.json';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import Login from './routes/login.route';
 import { AjoutEtudiantRoute } from './routes/ajoutEtudiant.route';
 import { AjoutNoteRoute } from './routes/ajoutNote.route';
@@ -30,7 +29,7 @@ interface IModeleProps {
 
 function Modele(props: IModeleProps) {
   const langues = ["Français", "English"]
-  const [user, loading] = useAuthState(auth);
+  const [user, _] = useAuthState(auth);
 
   const deconnexion = () => {
     auth.signOut().then(function() {
