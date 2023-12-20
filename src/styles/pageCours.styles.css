@@ -1,0 +1,9 @@
+.pastille-cours {
+    display: inline-block;
+    background-color: #3498db;
+    color: #ffffff;
+    padding: 8px 12px;
+    border-radius: 20px;
+    margin-right: 8px;
+    font-size: 14px;
+  }

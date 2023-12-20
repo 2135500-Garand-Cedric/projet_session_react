@@ -1,0 +1,33 @@
+.element {
+    display: flex;
+    font-size: 30px;
+    text-align: start;
+    padding: 10px;
+    flex-wrap: nowrap;
+}
+
+.zone {
+    width: 100%;
+}
+
+.conteneur {
+    display: flex;
+}
+
+.bouton {
+    margin: auto;
+    background-color: #f2f2f2;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.bouton:hover {
+    background-color: #ddd;
+}
+
+.cours {
+    border: 2px solid #f2f2f2;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 10px;
+}
