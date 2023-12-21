@@ -19,3 +19,6 @@ un élève.
 Informations d'authentifiactions:
 Courriel: rivard.etienne@cegepvicto.ca
 Mot de passe: EtienneRivard123
+
+Url de l'application en ligne: https://projet-session-react.netlify.app/
+Il faut que l'api en local roule pour que l'application en ligne fonctionne
